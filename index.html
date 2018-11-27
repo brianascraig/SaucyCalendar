@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Keep your meals saucy and exciting with Saucy Meal Calendar.">
+    <title>Saucy Calendar</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
+    <script src='lib/jquery.min.js'></script>
+    <script src='lib/moment.min.js'></script>
+    <script src='fullcalendar/fullcalendar.js'></script>
+  </head>
+  <body>
+    <header role="banner">
+      <h1>Saucy Calendar</h1>
+      <h2 class="backButton hidden></h2>
+    </header>
+    <section role="region" class="signUpScreen hidden">
+      <div class="signUpSignInBlock hidden">
+        <h3 class="signUpBanner">Sign Up</h3>
+        <div class="signIn">
+          <form action="" method="get" class="signUpForm">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required>
+            <label for="signUpEmail">Email:</label>
+            <input type="email" name="signUpEmail" id="signUpEmail" required>
+            <label for="signUpPassword">Password:</label>
+            <input type="password" id="signUpPassword" name="signUpPassword" minlength="8" maxlength="15" required>
+            <button type="submit" class="signUpSubmitButton">Submit</button> 
+          </form>
+        </div>
+        <div class="signInOption">
+          <p>Already have an account?</p>
+          <button type="button" class="existingAccountSignInButton">Sign In</button>
+        </div>
+      </div>
+    </section>
+    <section role="region" class="signInScreen hidden">
+      <div class="signInBlock">
+        <h3 class="signInBanner">Sign In</h3>
+        <form action="" method="get" class="signInForm">
+          <label for="signInEmail">Email:</label>
+          <input type="email" name="signInEmail" id="signInEmail" required>
+          <label for="signInPassword">Password:</label>
+          <input type="password" name="signInPassword" id="signInPassword" minlength="8" required>
+          <button type="submit" class="signInButton">Submit</button>
+        </form>
+      </div>
+    </section>
+    <section role="region" class="homeScreen">
+      <button type="button" class="viewMealCalendarButton">See My Meal Calendar</button>
+      <button type="button" class="changeMealCalendarButton">Change My Meal Calendar</button>
+      <button type="button" class="newMealCalendar">Start New Meal Calendar</button>
+      <button type="button" class="viewGroceryList">See My Grocery List</button>
+    </section>
+    <section role="region" class="foodPrefScreen hidden">
+    </section>
+    <section role="region" class="mealCalendarScreen hidden">
+    </section>
+    <section role="region" class="recipeDetailsScreen hidden">
+      <div class="ingredientsBlock">
+        <h3>Ingredients</h3>
+        <ul class="ingredientsList">
+        </ul>
+      </div>
+      <div class="instructionsBlock">
+        <h3>Instructions</h3>
+        <ol class="instructionsList">
+        </ol>
+      </div>
+    </section>
+    <section role="region" class="groceryListScreen hidden">
+      <div class="groceryList">
+        <h3>Grocery List</h3>
+        <div class="checkList">
+        </div>
+      </div>
+    </section>
+    <script
+			  src="https://code.jquery.com/jquery-3.3.1.js"
+			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			  crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
