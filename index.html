@@ -12,36 +12,20 @@
       <h1>Saucy Calendar</h1>
       <h2 class="backButton hidden></h2>
     </header>
-    <section role="region" class="signUpScreen hidden">
-      <div class="signUpSignInBlock hidden">
-        <h3 class="signUpBanner">Sign Up</h3>
-        <div class="signIn">
-          <form action="" method="get" class="signUpForm">
+    <section role="region" class="getStartedScreen">
+      <div class="getStartedBlock">
+        <h3 class="getStartedBanner">Get Started</h3>
+        <div class="getStarted">
+          <form action="" method="get" class="getStartedForm">
             <label for="name">Name:</label>
             <input type="text" name="name" id="name" required>
-            <label for="signUpEmail">Email:</label>
-            <input type="email" name="signUpEmail" id="signUpEmail" required>
-            <label for="signUpPassword">Password:</label>
-            <input type="password" id="signUpPassword" name="signUpPassword" minlength="8" maxlength="15" required>
-            <button type="submit" class="signUpSubmitButton">Submit</button> 
+            <label for="userEmail">Email:</label>
+            <input type="email" name="userEmail" id="userEmail" required>
+            <label for="userPassword">Password:</label>
+            <input type="password" id="userPassword" name="userPassword" minlength="8" maxlength="15" required>
+            <button type="submit" class="userSubmitButton">Submit</button> 
           </form>
         </div>
-        <div class="signInOption">
-          <p>Already have an account?</p>
-          <button type="button" class="existingAccountSignInButton">Sign In</button>
-        </div>
-      </div>
-    </section>
-    <section role="region" class="signInScreen hidden">
-      <div class="signInBlock">
-        <h3 class="signInBanner">Sign In</h3>
-        <form action="" method="get" class="signInForm">
-          <label for="signInEmail">Email:</label>
-          <input type="email" name="signInEmail" id="signInEmail" required>
-          <label for="signInPassword">Password:</label>
-          <input type="password" name="signInPassword" id="signInPassword" minlength="8" required>
-          <button type="submit" class="signInButton">Submit</button>
-        </form>
       </div>
     </section>
     <section role="region" class="homeScreen">
@@ -78,8 +62,8 @@
         </div>
       </div>
       <div class="area">
-        <h3>Area</h3>
-        <div class="areaChecklist">
+        <h3>Cuisine</h3>
+        <div class="cuisineChecklist">
           <div class="checklistCol1">
             <input type="checkbox" id="american" name="american">
             <label for="american">American</label>
@@ -124,8 +108,135 @@
           </div>
         </div>
       </div>
+      <div class="flavor">
+        <h3>Flavor</h3>
+        <div class="flavorChecklist">
+          <div class="checklistCol1">
+            <input type="checkbox" id="sweet" name="sweet">
+            <label for="sweet">Sweet</label>
+            <input type="checkbox" id="meaty" name="meaty">
+            <label for="meaty">Meaty</label>
+            <input type="checkbox" id="sour" name="sour">
+            <label for="sour">Sour</label>
+          </div>
+          <div class="checklistCol2">
+            <input type="checkbox" id="bitter" name="bitter">
+            <label for="bitter">Bitter</label>
+            <input type="checkbox" id="salty" name="salty">
+            <label for="salty">Salty</label>
+            <input type="checkbox" id="piquant" name="piquant">
+            <label for="piquant">Piquant</label>
+          </div>
+        </div>
+      </div>
+      <div class="allergies">
+        <h3>Allergies</h3>
+        <div class="allergyChecklist">
+          <div class="checklistCol1">
+            <input type="checkbox" id="gluten-free" name="gluten-free">
+            <label for="gluten-free">Gluten-Free</label>
+            <input type="checkbox" id="peanut-free" name="peanut-free">
+            <label for="peanut-free">Peanut-Free</label>
+            <input type="checkbox" id="seafood-free" name="seafood-free">
+            <label for="seafood-free">Seafood-Free</label>
+            <input type="checkbox" id="sesame-free" name="sesame-free">
+            <label for="sesame-free">Sesame-Free</label>
+            <input type="checkbox" id="soy-free" name="soy-free">
+            <label for="soy-free">Soy-Free</label>
+          </div>
+          <div class="checklistCol2">
+            <input type="checkbox" id="dairy-free" name="dairy-free">
+            <label for="dairy-free">Dairy-Free</label>
+            <input type="checkbox" id="egg-free" name="egg-free">
+            <label for="egg-free">Egg-Free</label>
+            <input type="checkbox" id="sulfite-free" name="sulfite-free">
+            <label for="sulfite-free">Sulfite-Free</label>
+            <input type="checkbox" id="tree_nut-free" name="tree_nut-free">
+            <label for="tree_nut-free">Tree Nut-Free</label>
+            <input type="checkbox" id="wheat-free" name="wheat-free">
+            <label for="wheat-free">Wheat-Free</label>
+          </div>
+        </div>
+      </div>
+      <div class="diet">
+        <h3>Diet</h3>
+        <div class="dietChecklist">
+          <div class="checklistCol1">
+            <input type="checkbox" id="lacto-vegetarian" name="lacto-vegetarian">
+            <label for="lacto-vegetarian">Lacto-Vegetarian</label>
+            <input type="checkbox" id="ovo-vegetarian" name="ovo-vegetarian">
+            <label for="ovo-vegetarian">Ovo-Vegetarian</label>
+            <input type="checkbox" id="pescetarian" name="pescetarian">
+            <label for="pescetarian">Pescetarian</label>
+          </div>
+          <div class="checklistCol2">
+            <input type="checkbox" id="vegan" name="vegan">
+            <label for="vegan">Vegan</label>
+            <input type="checkbox" id="vegetarian" name="vegetarian">
+            <label for="vegetarian">Vegetarian</label>
+            <input type="checkbox" id="paleo" name="paleo">
+            <label for="paleo">Paleo</label>
+          </div>
+        </div>
+      </div>
     </section>
     <section role="region" class="mealCalendarScreen hidden">
+      <h1>CSS Calendar</h1>
+        <div class="month">      
+          <ul>
+            <li class="prev">&#10094;</li>
+            <li class="next">&#10095;</li>
+            <li>
+              August<br>
+              <span style="font-size:18px">2017</span>
+            </li>
+          </ul>
+        </div>
+        
+        <ul class="weekdays">
+          <li>Mo</li>
+          <li>Tu</li>
+          <li>We</li>
+          <li>Th</li>
+          <li>Fr</li>
+          <li>Sa</li>
+          <li>Su</li>
+        </ul>
+
+        <ul class="days">  
+          <li>1 <br><br><a href=""><a></li>
+          <li>2 <br><br><a href=""><a></li>
+          <li>3 <br><br><a href=""><a></li>
+          <li>4 <br><br><a href=""><a></li>
+          <li>5 <br><br><a href=""><a></li>
+          <li>6 <br><br><a href=""><a></li>
+          <li>7 <br><br><a href=""><a></li>
+          <li>8 <br><br><a href=""><a></li>
+          <li>9 <br><br><a href=""><a></li>
+          <li><span class="active">10</span> <br><br><a href=""><a></li>
+          <li>11 <br><br><a href=""><a></li>
+          <li>12 <br><br><a href=""><a></li>
+          <li>13 <br><br><a href=""><a></li>
+          <li>14 <br><br><a href=""><a></li>
+          <li>15 <br><br><a href=""><a></li>
+          <li>16 <br><br><a href=""><a></li>
+          <li>17 <br><br><a href=""><a></li>
+          <li>18 <br><br><a href=""><a></li>
+          <li>19 <br><br><a href=""><a></li>
+          <li>20 <br><br><a href=""><a></li>
+          <li>21 <br><br><a href=""><a></li>
+          <li>22 <br><br><a href=""><a></li>
+          <li>23 <br><br><a href=""><a></li>
+          <li>24 <br><br><a href=""><a></li>
+          <li>25 <br><br><a href=""><a></li>
+          <li>26 <br><br><a href=""><a></li>
+          <li>27 <br><br><a href=""><a></li>
+          <li>28 <br><br><a href=""><a></li>
+          <li>29 <br><br><a href=""><a></li>
+          <li>30 <br><br><a href=""><a></li>
+          <li>31 <br><br><a href=""><a></li>
+        </ul>
+
     </section>
     <section role="region" class="recipeDetailsScreen hidden">
       <div class="ingredientsBlock">
