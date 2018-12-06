@@ -11,7 +11,7 @@
   <body>
     <header role="banner">
       <h1>Saucy Calendar</h1>
-      <h2 class="backButton hidden"></h2>
+      <button type="button" class="backButton js-backButton hidden">Back to Home</button>
     </header>
     <section role="region" class="getStartedScreen">
       <div class="getStartedBlock">
@@ -27,12 +27,12 @@
         </div>
       </div>
     </section>
-    <section role="region" class="homeScreen hidden">
-      <button type="button" class="viewMealCalendarButton">See My Meal Calendar</button>
-      <button type="button" class="changeMealCalendarButton">Change My Meal Calendar</button>
-      <button type="button" class="newMealCalendar">Start New Meal Calendar</button>
+    <section role="region" class="homeScreen js-homeScreen hidden">
+      <button type="button" class="viewMealCalendarButton js-viewMealCalendarButton">See My Meal Calendar</button>
+      <button type="button" class="changeMealCalendarButton js-changeMealCalendarButton">Change My Meal Calendar</button>
+      <button type="button" class="newMealCalendar js-newMealCalendar">Start New Meal Calendar</button>
     </section>
-    <section role="region" class="foodPrefScreen hidden">
+    <section role="region" class="foodPrefScreen js-foodPrefScreen hidden">
       <h2>Food Preferences</h2>
       <div class="categories">
         <h3>Categories</h3>
@@ -235,6 +235,9 @@
           <li>31 <br><br><a href=""></a></li>
         </ul>
 
+    </section>
+    <section role="region" class="calendarDoesNotExistScreen js-calendarDoesNotExistScreen hidden">
+      <h3>You have not created a meal calendar yet.</h3>
     </section>
     <section role="region" class="recipeDetailsScreen hidden">
       <div class="ingredientsBlock">
