@@ -17,7 +17,7 @@ function getExistingMealCalendar() {
     $('.js-homeScreen').toggleClass('hidden');
     $('.js-backButton').toggleClass('hidden');
     if (currentMealCalendar.length == 0) {
-      $('.js-calendarDoesNotExistScreen').toggleClass('hidden');
+      $('.js-calendarErrorMessage').html('You have not created a meal calendar yet.');
     }
     else {
       getMealCalendarResults();
@@ -30,7 +30,6 @@ function backToHome() {
     event.preventDefault();
     $('.js-homeScreen').toggleClass('hidden');
     $('.js-backButton').toggleClass('hidden');
-    $('.js-calendarDoesNotExistScreen').toggleClass('hidden');
   })
 }
 
@@ -48,13 +47,17 @@ function getFoodPrefScreen() {
 function changeMealCalendar() {
   $('.js-changeMealCalendarButton').on('click', function (event){
     event.preventDefault();
-    getFoodPrefScreen();
+    // getFoodPrefScreen();
+    $('.js-homeScreen').toggleClass('hidden');
+    $('.js-foodPrefScreen').toggleClass('.hidden');
     $('.js-backButton').toggleClass('hidden');
     previousMealCalendar.length= 0;
     previousMealCalendar = currentMealCalendar.slice();
     currentMealCalendar.length = 0;
   });
 }
+
+
 
 // function getFoodCategories() {
 //   let baseUrl = "https://www.themealdb.com/api/json/v1/1/";
@@ -64,6 +67,7 @@ function changeMealCalendar() {
 function handleApp() {
   getHomeScreen();
   getExistingMealCalendar();
+  changeMealCalendar();
   backToHome();
 }
 
