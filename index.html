@@ -34,159 +34,161 @@
     </section>
     <section role="region" class="foodPrefScreen js-foodPrefScreen hidden">
       <h2>Food Preferences</h2>
-      <div class="categories">
-        <h3>Categories</h3>
-        <div class="categoriesChecklist">
-          <div class="checklistCol1">
-            <input type="checkbox" id="beef" name="beef">
-            <label for="beef">Beef</label>
-            <input type="checkbox" id="chicken" name="chicken">
-            <label for="chicken">Chicken</label>
-            <input type="checkbox" id="lamb" name="lamb">
-            <label for="lamb">Lamb</label>
-            <input type="checkbox" id="pasta" name="pasta">
-            <label for="pasta">Pasta</label>
-          </div>
-          <div class="checkListCol2">
-            <input type="checkbox" id="pork" name="pork">
-            <label for="pork">Pork</label>
-            <input type="checkbox" id="seafood" name="seafood">
-            <label for="seafood">Seafood</label>
-            <input type="checkbox" id="vegan" name="vegan">
-            <label for="vegan">Vegan</label>
-            <input type="checkbox" id="vegetarian" name="vegetarian">
-            <label for="vegetarian">Vegetarian</label>
-          </div>
-        </div>
-      </div>
-      <div class="area">
-        <h3>Cuisine</h3>
-        <div class="cuisineChecklist">
-          <div class="checklistCol1">
-            <input type="checkbox" id="american" name="american">
-            <label for="american">American</label>
-            <input type="checkbox" id="british" name="british">
-            <label for="british">British</label>
-            <input type="checkbox" id="canadian" name="canadian">
-            <label for="canadian">Canadian</label>
-            <input type="checkbox" id="chinese" name="chinese">
-            <label for="chinese">Chinese</label>
-            <input type="checkbox" id="dutch" name="dutch">
-            <label for="dutch">Dutch</label>
-            <input type="checkbox" id="french" name="french">
-            <label for="french">French</label>
-            <input type="checkbox" id="greek" name="greek">
-            <label for="greek">Greek</label>
-            <input type="checkbox" id="indian" name="indian">
-            <label for="indian">Indian</label>
-            <input type="checkbox" id="irish" name="irish">
-            <label for="irish">Irish</label>
-          </div>
-          <div class="checklistCol2">
-            <input type="checkbox" id="italian" name="italian">
-            <label for="italian">Italian</label>
-            <input type="checkbox" id="jamaican" name="jamaican">
-            <label for="jamaican">Jamaican</label>
-            <input type="checkbox" id="japanese" name="japanese">
-            <label for="japanese">Japanese</label>
-            <input type="checkbox" id="malaysian" name="malaysian">
-            <label for="malaysian">Malaysian</label>
-            <input type="checkbox" id="mexican" name="mexican">
-            <label for="mexican">Mexican</label>
-            <input type="checkbox" id="moroccan" name="moroccan">
-            <label for="moroccan">Moroccan</label>
-            <input type="checkbox" id="russian" name="russian">
-            <label for="russian">Russian</label>
-            <input type="checkbox" id="spanish" name="spanish">
-            <label for="spanish">Spanish</label>
-            <input type="checkbox" id="thai" name="thai">
-            <label for="thai">Thai</label>
-            <input type="checkbox" id="vietnamese" name="vietnamese">
-            <label for="vietnamese">Vietnamese</label>
+      <form action="" method="get" class="foodPrefForm">
+        <div class="categories">
+          <h3>Categories</h3>
+          <div class="categoriesChecklist">
+            <div class="checklistCol1">
+              <input type="checkbox" id="beef" name="beef">
+              <label for="beef">Beef</label>
+              <input type="checkbox" id="chicken" name="chicken">
+              <label for="chicken">Chicken</label>
+              <input type="checkbox" id="lamb" name="lamb">
+              <label for="lamb">Lamb</label>
+              <input type="checkbox" id="pasta" name="pasta">
+              <label for="pasta">Pasta</label>
+            </div>
+            <div class="checkListCol2">
+              <input type="checkbox" id="pork" name="pork">
+              <label for="pork">Pork</label>
+              <input type="checkbox" id="seafood" name="seafood">
+              <label for="seafood">Seafood</label>
+              <input type="checkbox" id="vegan" name="vegan">
+              <label for="vegan">Vegan</label>
+              <input type="checkbox" id="vegetarian" name="vegetarian">
+              <label for="vegetarian">Vegetarian</label>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="flavor">
-        <h3>Flavor</h3>
-        <div class="flavorChecklist">
-          <div class="checklistCol1">
-            <input type="checkbox" id="sweet" name="sweet">
-            <label for="sweet">Sweet</label>
-            <input type="checkbox" id="meaty" name="meaty">
-            <label for="meaty">Meaty</label>
-            <input type="checkbox" id="sour" name="sour">
-            <label for="sour">Sour</label>
-          </div>
-          <div class="checklistCol2">
-            <input type="checkbox" id="bitter" name="bitter">
-            <label for="bitter">Bitter</label>
-            <input type="checkbox" id="salty" name="salty">
-            <label for="salty">Salty</label>
-            <input type="checkbox" id="piquant" name="piquant">
-            <label for="piquant">Piquant</label>
-          </div>
-        </div>
-      </div>
-      <div class="allergies">
-        <h3>Allergies</h3>
-        <div class="allergyChecklist">
-          <div class="checklistCol1">
-            <input type="checkbox" id="gluten-free" name="gluten-free">
-            <label for="gluten-free">Gluten-Free</label>
-            <input type="checkbox" id="peanut-free" name="peanut-free">
-            <label for="peanut-free">Peanut-Free</label>
-            <input type="checkbox" id="seafood-free" name="seafood-free">
-            <label for="seafood-free">Seafood-Free</label>
-            <input type="checkbox" id="sesame-free" name="sesame-free">
-            <label for="sesame-free">Sesame-Free</label>
-            <input type="checkbox" id="soy-free" name="soy-free">
-            <label for="soy-free">Soy-Free</label>
-          </div>
-          <div class="checklistCol2">
-            <input type="checkbox" id="dairy-free" name="dairy-free">
-            <label for="dairy-free">Dairy-Free</label>
-            <input type="checkbox" id="egg-free" name="egg-free">
-            <label for="egg-free">Egg-Free</label>
-            <input type="checkbox" id="sulfite-free" name="sulfite-free">
-            <label for="sulfite-free">Sulfite-Free</label>
-            <input type="checkbox" id="tree_nut-free" name="tree_nut-free">
-            <label for="tree_nut-free">Tree Nut-Free</label>
-            <input type="checkbox" id="wheat-free" name="wheat-free">
-            <label for="wheat-free">Wheat-Free</label>
+        <div class="area">
+          <h3>Cuisine</h3>
+          <div class="cuisineChecklist">
+            <div class="checklistCol1">
+              <input type="checkbox" id="american" name="american">
+              <label for="american">American</label>
+              <input type="checkbox" id="british" name="british">
+              <label for="british">British</label>
+              <input type="checkbox" id="canadian" name="canadian">
+              <label for="canadian">Canadian</label>
+              <input type="checkbox" id="chinese" name="chinese">
+              <label for="chinese">Chinese</label>
+              <input type="checkbox" id="dutch" name="dutch">
+              <label for="dutch">Dutch</label>
+              <input type="checkbox" id="french" name="french">
+              <label for="french">French</label>
+              <input type="checkbox" id="greek" name="greek">
+              <label for="greek">Greek</label>
+              <input type="checkbox" id="indian" name="indian">
+              <label for="indian">Indian</label>
+              <input type="checkbox" id="irish" name="irish">
+              <label for="irish">Irish</label>
+            </div>
+            <div class="checklistCol2">
+              <input type="checkbox" id="italian" name="italian">
+              <label for="italian">Italian</label>
+              <input type="checkbox" id="jamaican" name="jamaican">
+              <label for="jamaican">Jamaican</label>
+              <input type="checkbox" id="japanese" name="japanese">
+              <label for="japanese">Japanese</label>
+              <input type="checkbox" id="malaysian" name="malaysian">
+              <label for="malaysian">Malaysian</label>
+              <input type="checkbox" id="mexican" name="mexican">
+              <label for="mexican">Mexican</label>
+              <input type="checkbox" id="moroccan" name="moroccan">
+              <label for="moroccan">Moroccan</label>
+              <input type="checkbox" id="russian" name="russian">
+              <label for="russian">Russian</label>
+              <input type="checkbox" id="spanish" name="spanish">
+              <label for="spanish">Spanish</label>
+              <input type="checkbox" id="thai" name="thai">
+              <label for="thai">Thai</label>
+              <input type="checkbox" id="vietnamese" name="vietnamese">
+              <label for="vietnamese">Vietnamese</label>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="diet">
-        <h3>Diet</h3>
-        <div class="dietChecklist">
-          <div class="checklistCol1">
-            <input type="checkbox" id="lacto-vegetarian" name="lacto-vegetarian">
-            <label for="lacto-vegetarian">Lacto-Vegetarian</label>
-            <input type="checkbox" id="ovo-vegetarian" name="ovo-vegetarian">
-            <label for="ovo-vegetarian">Ovo-Vegetarian</label>
-            <input type="checkbox" id="pescetarian" name="pescetarian">
-            <label for="pescetarian">Pescetarian</label>
-          </div>
-          <div class="checklistCol2">
-            <input type="checkbox" id="vegan" name="vegan">
-            <label for="vegan">Vegan</label>
-            <input type="checkbox" id="vegetarian" name="vegetarian">
-            <label for="vegetarian">Vegetarian</label>
-            <input type="checkbox" id="paleo" name="paleo">
-            <label for="paleo">Paleo</label>
+        <div class="flavor">
+          <h3>Flavor</h3>
+          <div class="flavorChecklist">
+            <div class="checklistCol1">
+              <input type="checkbox" id="sweet" name="sweet">
+              <label for="sweet">Sweet</label>
+              <input type="checkbox" id="meaty" name="meaty">
+              <label for="meaty">Meaty</label>
+              <input type="checkbox" id="sour" name="sour">
+              <label for="sour">Sour</label>
+            </div>
+            <div class="checklistCol2">
+              <input type="checkbox" id="bitter" name="bitter">
+              <label for="bitter">Bitter</label>
+              <input type="checkbox" id="salty" name="salty">
+              <label for="salty">Salty</label>
+              <input type="checkbox" id="piquant" name="piquant">
+              <label for="piquant">Piquant</label>
+            </div>
           </div>
         </div>
-      </div>
+        <div class="allergies">
+          <h3>Allergies</h3>
+          <div class="allergyChecklist">
+            <div class="checklistCol1">
+              <input type="checkbox" id="gluten-free" name="gluten-free">
+              <label for="gluten-free">Gluten-Free</label>
+              <input type="checkbox" id="peanut-free" name="peanut-free">
+              <label for="peanut-free">Peanut-Free</label>
+              <input type="checkbox" id="seafood-free" name="seafood-free">
+              <label for="seafood-free">Seafood-Free</label>
+              <input type="checkbox" id="sesame-free" name="sesame-free">
+              <label for="sesame-free">Sesame-Free</label>
+              <input type="checkbox" id="soy-free" name="soy-free">
+              <label for="soy-free">Soy-Free</label>
+            </div>
+            <div class="checklistCol2">
+              <input type="checkbox" id="dairy-free" name="dairy-free">
+              <label for="dairy-free">Dairy-Free</label>
+              <input type="checkbox" id="egg-free" name="egg-free">
+              <label for="egg-free">Egg-Free</label>
+              <input type="checkbox" id="sulfite-free" name="sulfite-free">
+              <label for="sulfite-free">Sulfite-Free</label>
+              <input type="checkbox" id="tree_nut-free" name="tree_nut-free">
+              <label for="tree_nut-free">Tree Nut-Free</label>
+              <input type="checkbox" id="wheat-free" name="wheat-free">
+              <label for="wheat-free">Wheat-Free</label>
+            </div>
+          </div>
+        </div>
+        <div class="diet">
+          <h3>Diet</h3>
+          <div class="dietChecklist">
+            <div class="checklistCol1">
+              <input type="checkbox" id="lacto-vegetarian" name="lacto-vegetarian">
+              <label for="lacto-vegetarian">Lacto-Vegetarian</label>
+              <input type="checkbox" id="ovo-vegetarian" name="ovo-vegetarian">
+              <label for="ovo-vegetarian">Ovo-Vegetarian</label>
+              <input type="checkbox" id="pescetarian" name="pescetarian">
+              <label for="pescetarian">Pescetarian</label>
+            </div>
+            <div class="checklistCol2">
+              <input type="checkbox" id="vegan" name="vegan">
+              <label for="vegan">Vegan</label>
+              <input type="checkbox" id="vegetarian" name="vegetarian">
+              <label for="vegetarian">Vegetarian</label>
+              <input type="checkbox" id="paleo" name="paleo">
+              <label for="paleo">Paleo</label>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="foodPrefSubmit js-foodPrefSubmit">Submit</button>
+      </form>
     </section>
-    <section role="region" class="mealCalendarScreen hidden">
-      <h1>CSS Calendar</h1>
+    <section role="region" class="mealCalendarScreen js-mealCalendarScreen hidden">
         <div class="month">      
           <ul>
-            <li class="prev">&#10094;</li>
-            <li class="next">&#10095;</li>
+            <li class="prev"></li>
+            <li class="next"></li>
             <li>
-              August<br>
-              <span style="font-size:18px">2017</span>
+              December<br>
+              <span style="font-size:18px">2018</span>
             </li>
           </ul>
         </div>
@@ -235,9 +237,6 @@
           <li>31 <br><br><a href=""></a></li>
         </ul>
 
-    </section>
-    <section role="region" class="calendarDoesNotExistScreen js-calendarDoesNotExistScreen hidden">
-      <h3>You have not created a meal calendar yet.</h3>
     </section>
     <section role="region" class="recipeDetailsScreen hidden">
       <div class="ingredientsBlock">
