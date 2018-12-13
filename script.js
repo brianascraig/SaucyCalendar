@@ -38,6 +38,14 @@ function getMealCalendarResults() {
   //recent food preferences.
   $('.foodPrefForm').submit(function(event){
     event.preventDefault();
+    var beef = $("#beef").is(":checked");
+    var pork = $("#pork").is(":checked");
+    var chicken = $("#chicken").is(":checked");
+    var seafood = $("#seafood").is(":checked");
+    var lamb = $("#lamb").is(":checked");
+    var vegan = $("#vegan").is(":checked");
+    var pasta = $("#pasta").is(":checked");
+    var vegetarian = $("#vegetarian").is(":checked");
     $('.js-foodPrefScreen').toggleClass('hidden');
     $('.js-mealCalendarScreen').toggleClass('hidden');
     $('.js-backButton').toggleClass('hidden');
@@ -78,7 +86,7 @@ function startNewMealCalendar() {
 function getFoodCategories() {
   let baseUrl = "https://www.themealdb.com/api/json/v1/1/filter.php?c=";
   let categorySelection = input.val();
-  let foodCategoriesApi = '${baseUrl}${categorySelection}"';
+  let foodCategoriesApi = '${baseUrl}${categorySelection}';
 }
 
 function handleApp() {
