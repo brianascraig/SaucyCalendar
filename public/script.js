@@ -99,23 +99,21 @@ function startNewMealCalendar() {
 
 
 function getFoodCategories(categories) {
-  let baseUrl = "https://www.themealdb.com/api/json/v1/1/filter.php?c=";
-  // let foodCategoriesApi = '${baseUrl}${categorySelection}';
-  $.ajax({
-    // contentType: "application/json; charset=utf-8",
-    headers: {
-      "accept": "application/json; odata=verbose"
-    },
-    type: 'GET',
-    url: `https://www.themealdb.com/api/json/v1/1/filter.php?c=${categories[0]}`,
-    // url: "https://www.themealdb.com/api/json/v1/1/filter.php?c=beef",
-    success: (data) => {
-      console.log(data);
-    },
-    error: (error) => {
-      console.log(error);
-    }
-  });
+  $(categories).each(function(index) {
+    $.ajax({
+      headers: {
+        "accept": "application/json; odata=verbose"
+      },
+      type: 'GET',
+      url: `https://www.themealdb.com/api/json/v1/1/filter.php?c=${categories[index]}`,
+      success: (data) => {
+        console.log(data);
+      },
+      error: (error) => {
+        console.log(error);
+      }
+    });
+  })
 }
 
 function handleApp() {
