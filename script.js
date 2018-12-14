@@ -38,9 +38,32 @@ function getMealCalendarResults() {
   //recent food preferences.
   $('.foodPrefForm').submit(function(event){
     event.preventDefault();
+    var options = [];
+    var beef = $("#beef").is(":checked");
+    var pork = $("#pork").is(":checked");
+    var chicken = $("#chicken").is(":checked");
+    var seafood = $("#seafood").is(":checked");
+    var lamb = $("#lamb").is(":checked");
+    var vegan = $("#vegan").is(":checked");
+    var pasta = $("#pasta").is(":checked");
+    var vegetarian = $("#vegetarian").is(":checked");
+    if(beef) options.push("beef");
+    if(pork) options.push("pork");
+    if(chicken) options.push("chicken");
+    if(seafood) options.push("seafood");
+    if(lamb) options.push("lamb");
+    if(vegan) options.push("vegan");
+    if(pasta) options.push("pasta");
+    if(vegetarian) options.push("vegetarian");
     $('.js-foodPrefScreen').toggleClass('hidden');
     $('.js-mealCalendarScreen').toggleClass('hidden');
     $('.js-backButton').toggleClass('hidden');
+    if(!options) {
+      console.log("you must make a selection!")
+      return;
+    } else {
+      getFoodCategories(options)
+    }
   });
 }
 
@@ -75,10 +98,23 @@ function startNewMealCalendar() {
 
 
 
-function getFoodCategories() {
+function getFoodCategories(categories) {
   let baseUrl = "https://www.themealdb.com/api/json/v1/1/filter.php?c=";
-  let categorySelection = input.val();
-  let foodCategoriesApi = '${baseUrl}${categorySelection}"';
+  // let foodCategoriesApi = '${baseUrl}${categorySelection}';
+  $.ajax({
+    contentType: "application/json; charset=utf-8",
+    headers: {
+      "accept": "application/json; odata=verbose"
+    },
+    type: 'GET',
+    url: `${baseUrl,categories[0]}`,
+    success: (data) => {
+      console.log(data);
+    },
+    error: (error) => {
+      console.log(error);
+    }
+  });
 }
 
 function handleApp() {
