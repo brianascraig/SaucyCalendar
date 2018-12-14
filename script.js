@@ -100,8 +100,21 @@ function startNewMealCalendar() {
 
 function getFoodCategories(categories) {
   let baseUrl = "https://www.themealdb.com/api/json/v1/1/filter.php?c=";
-  let categorySelection = input.val();
-  let foodCategoriesApi = '${baseUrl}${categorySelection}';
+  // let foodCategoriesApi = '${baseUrl}${categorySelection}';
+  $.ajax({
+    contentType: "application/json; charset=utf-8",
+    headers: {
+      "accept": "application/json; odata=verbose"
+    },
+    type: 'GET',
+    url: `${baseUrl,categories[0]}`,
+    success: (data) => {
+      console.log(data);
+    },
+    error: (error) => {
+      console.log(error);
+    }
+  });
 }
 
 function handleApp() {
