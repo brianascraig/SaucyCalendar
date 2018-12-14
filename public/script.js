@@ -97,8 +97,9 @@ function startNewMealCalendar() {
 }
 
 
-
+//TODO wrap ajax calls in a promise
 function getFoodCategories(categories) {
+  var recipes = [];
   $(categories).each(function(index) {
     $.ajax({
       headers: {
@@ -107,13 +108,14 @@ function getFoodCategories(categories) {
       type: 'GET',
       url: `https://www.themealdb.com/api/json/v1/1/filter.php?c=${categories[index]}`,
       success: (data) => {
-        console.log(data);
+        recipes.push(data);
       },
       error: (error) => {
         console.log(error);
       }
     });
-  })
+  });
+  console.log(recipes);
 }
 
 function handleApp() {
