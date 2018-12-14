@@ -38,6 +38,7 @@ function getMealCalendarResults() {
   //recent food preferences.
   $('.foodPrefForm').submit(function(event){
     event.preventDefault();
+    var options = [];
     var beef = $("#beef").is(":checked");
     var pork = $("#pork").is(":checked");
     var chicken = $("#chicken").is(":checked");
@@ -46,9 +47,23 @@ function getMealCalendarResults() {
     var vegan = $("#vegan").is(":checked");
     var pasta = $("#pasta").is(":checked");
     var vegetarian = $("#vegetarian").is(":checked");
+    if(beef) options.push("beef");
+    if(pork) options.push("pork");
+    if(chicken) options.push("chicken");
+    if(seafood) options.push("seafood");
+    if(lamb) options.push("lamb");
+    if(vegan) options.push("vegan");
+    if(pasta) options.push("pasta");
+    if(vegetarian) options.push("vegetarian");
     $('.js-foodPrefScreen').toggleClass('hidden');
     $('.js-mealCalendarScreen').toggleClass('hidden');
     $('.js-backButton').toggleClass('hidden');
+    if(!options) {
+      console.log("you must make a selection!")
+      return;
+    } else {
+      getFoodCategories(options)
+    }
   });
 }
 
@@ -83,7 +98,7 @@ function startNewMealCalendar() {
 
 
 
-function getFoodCategories() {
+function getFoodCategories(categories) {
   let baseUrl = "https://www.themealdb.com/api/json/v1/1/filter.php?c=";
   let categorySelection = input.val();
   let foodCategoriesApi = '${baseUrl}${categorySelection}';
